@@ -1,0 +1,57 @@
+<header class="masthead" style="background-image: url(<%=asset_path 'post-sample-image' %>)">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>complete your form!</h1>
+              <h2 class="subheading">we can give you perfect solution</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p>연락하시기를 원하려면 아래 양식을 작성하세요.</p>
+            <%=form_for(@post, id: "contactForm") do |f| %>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+              <%= f.label :title %>
+              <%= f.text_field :title, placeholder: "Title", class: "form-control"  %>
+              <p class = "help-bock text-danger"></p>
+              </div>
+          </div>
+          <div class="control-group">
+               <div class="form-group floating-label-form-group controls">
+                   <%= f.label :contents %>
+                   <%= f.text_area :contents, placeholder: "Contents", class: "form-control", rows: 5 %>
+                </div>
+          </div>
+          <br>
+          <div class="form-group">
+          <!--<button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>-->
+                  <%= f.submit "생성하기", class: "btn btn-primary" %>
+          </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+   <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

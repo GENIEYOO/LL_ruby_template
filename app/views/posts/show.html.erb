@@ -1,0 +1,42 @@
+<header class="masthead" style="background-image: url(<%= asset_path 'post-bg.jpg' %>)">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>Your Story</h1>
+          <span class="meta">Posted by
+            <a href="#">Start Bootstrap</a>
+            on <%= @post.created_at.to_s(:short) %></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <blockquote class="blockquote">Title: <%= @post.title %></blockquote>
+                                       Content: <%=@post.contents %>
+        <a href="#">
+          <img class="img-fluid" src = "<%= asset_path 'post-sample-image.jpg' %>" alt="">
+         </a>
+         <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+     </div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
